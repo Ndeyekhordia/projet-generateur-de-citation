@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generateur de citation en javaScript</title>
+    <style>
+    
+
+     body {
+        background-color: rgb(255, 251, 251);
+     }
+     .boutton {
+        padding-top:50px;
+        padding-left:600px ;
+        text-align: center;
+        display: flex;
+        border-radius: 10px;
+        color: aqua;
+        box-shadow: 0 2px 10px rgb(0, 0, 0, 0.1);
+     }
+     .container {
+        padding: 0px;
+        margin: 0px;
+        color: rgb(0, 4, 255);
+        
+     }
+.cite {
+    padding: 50px, 50px;
+    margin: 100px;
+
+}
+
+     
+   
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+p {
+    background-color: blue;
+    padding: 50px;
+    padding: bottom;
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+    <fieldset>
+     <div class="container">
+        <h1>Generateur de citations</h1>
+    </div>
+        <div class="cite">
+            <p id="cite">Cliquez sur le bouton pour generer une citation</p>
+        </div>
+    </fieldset>
+    
+    </div>
+    
+    <div class="boutton">
+    <button onclick="idi()">Generer une citation</button>
+    </div>
+  
+  <fieldset>
+    <div class="citation">
+    
+    <p id="demo"></p>
+</div>
+
+</fieldset>
+    <script>
+        var cite = ["Une jeunesse mobilisée est dangereuse, une jeunesse mobilisée est une puissance qui effraye même les bombes atomiques."
+, " Il faut choisir entre le champagne pour quelques-uns et l'eau potable pour tous."
+, " Nous préférons un pas avec le peuple, que 10 pas sans le peuple !"
+, " Quand le peuple se met debout , l’impérialisme tremble."
+, " La patrie ou la mort, nous vaincrons."
+,"La vraie émancipation de la femme, c’est celle qui responsabilise la femme."
+, " Vivre en révolutionnaire, mourir en révolutionnaire."
+, "Notre maison blanche se trouve dans le Harlem noir.",
+ "L’esclave qui n’est pas capable d’assumer sa révolte ne mérite pas que l’on s’apitoie sur son sort. Cet esclave répondra seul de son malheur s’il se fait des illusions sur la condescendance suspecte d’un maître qui prétend l’affranchir  Seule la lutte libère .",
+
+"Cela va nous coûter la vie peut être, mais nous sommes pour prendre les risques, nous sommes là pour oser et vous êtes là pour continuer la lutte coûte que coûte.",
+"La maladie ne se guérit point en prononçant le nom du médicament, mais en prenant le médicament.", ""
+]
+
+        function idi() {
+            var randomIndex = Math.floor(Math.random() * cite.length);
+            var randomcite = cite[randomIndex];
+            document.getElementById("demo").innerHTML = "Thomas Sankara : " + randomcite;
+        }
+    </script>
+</body>
+</html>
